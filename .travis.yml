@@ -16,8 +16,8 @@ after_install:
   - sudo docker rm resume
 
 deploy:
-  provider: release
-  token:
+  provider: releases
   file: resume.pdf
+  overwrite: true
   on:
     tags: true
