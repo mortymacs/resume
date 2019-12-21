@@ -6,7 +6,7 @@ before_install:
 - sudo apt-get upgrade -y
 - sudo apt-get install -y docker-ce
 
-install:
+script:
 - sudo docker build -t resume:latest -f Dockerfile .
 - sudo docker run -dit --name resume resume:latest /bin/bash
 - sudo docker cp resume:/doc/resume.pdf .
