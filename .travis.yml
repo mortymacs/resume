@@ -8,8 +8,8 @@ before_install:
 
 install:
   - sudo docker build -t resume:latest -f Dockerfile .
-  - sudo docker run -tid resume:latest /bin/bash --name resume
-  - sudo docker cp resume:/doc/resume.pbf .
+  - sudo docker run -dit --name resume resume:latest /bin/bash
+  - sudo docker cp resume:/doc/resume.pdf .
 
 after_install:
   - sudo docker stop resume
@@ -18,6 +18,6 @@ after_install:
 deploy:
   provider: release
   token:
-  file: resume.pbf
+  file: resume.pdf
   on:
     tags: true
