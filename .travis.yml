@@ -2,18 +2,18 @@ dist: eoan
 sudo: required
 
 before_install:
-  - apt-get update
-  - apt-get upgrade -y
-  - apt-get install -y docker-ce
+  - sudo apt-get update
+  - sudo apt-get upgrade -y
+  - sudo apt-get install -y docker-ce
 
 install:
-  - docker build -t resume:latest -f Dockerfile .
-  - docker run -tid resume:latest /bin/bash --name resume
-  - docker cp resume:/doc/resume.pbf .
+  - sudo docker build -t resume:latest -f Dockerfile .
+  - sudo docker run -tid resume:latest /bin/bash --name resume
+  - sudo docker cp resume:/doc/resume.pbf .
 
 after_install:
-  - docker stop resume
-  - docker rm resume
+  - sudo docker stop resume
+  - sudo docker rm resume
 
 deploy:
   provider: release
