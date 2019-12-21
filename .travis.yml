@@ -2,22 +2,24 @@ dist: eoan
 sudo: required
 
 before_install:
-  - sudo apt-get update
-  - sudo apt-get upgrade -y
-  - sudo apt-get install -y docker-ce
+- sudo apt-get update
+- sudo apt-get upgrade -y
+- sudo apt-get install -y docker-ce
 
 install:
-  - sudo docker build -t resume:latest -f Dockerfile .
-  - sudo docker run -dit --name resume resume:latest /bin/bash
-  - sudo docker cp resume:/doc/resume.pdf .
+- sudo docker build -t resume:latest -f Dockerfile .
+- sudo docker run -dit --name resume resume:latest /bin/bash
+- sudo docker cp resume:/doc/resume.pdf .
 
 after_install:
-  - sudo docker stop resume
-  - sudo docker rm resume
+- sudo docker stop resume
+- sudo docker rm resume
 
 deploy:
   provider: releases
+  api_key:
+    secure: 20ep92+v843QnxDom4bbzAtDs4xivsjDawx3QC+EudvEAUB4oGuvysAprdu+t96Vi5CUfbPpEgUWOyxQiMhxvELBzT50UB+iIUeDDjqu6974o+BWA++UBQDZEbtbYuJNfkMIe+48eGSFXuMj6InPfOOIgaR68LIx7cwrC5xSl8OIzO61aqTYjUpleTDwaTwvafdFQzi5t9ro4vatv7jdcq2klS74ZsJk1+Dww1cGtjbnpxAauetDERRPgMIHkMayn4mqUe3weIWPG49jGhsjMVwtixh4nmJrkvGr/G3himYfdP/lnw6Xb9XPocVPBL9abM5VyeupW8rhhju9rxhvshYRflzhCx60XeuCCD1E3f+qv7LYnpc8uQ1fbENB+d44xJgLxCgSaiYYx8YdzJin/QaN16FAvenaA/KrW2IcYelUxIERUr2SKDA6n6ZaDYoJYGooDsgnpdA5rLzlnOk44lvYIn0aDytcbdlIlxcVZt/hxFZ2xDOyi8MVEfwv3ZLZ6o6zjJg96ju8c4pbhZWf3rYy2nO289wtRrinYIj7zTYRn2T+0tjxBFWD3hdOpUHM7kdsYwPW3m7da2+r/vkekH0a8I2SqyieLeRcGHNsX9x6TF2BkibSXbaRi8iX9Sk/cIRiBTWG/4QF1w5sC5NbIAk1VggQ5bT1uWrifKtWwu0=
   file: resume.pdf
-  overwrite: true
   on:
+    repo: mortezaipo/resume
     tags: true
