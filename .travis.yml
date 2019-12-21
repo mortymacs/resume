@@ -1,0 +1,23 @@
+dist: eoan
+sudo: required
+
+before_install:
+  - apt-get update
+  - apt-get upgrade -y
+  - apt-get install -y docker-ce
+
+install:
+  - docker build -t resume:latest -f Dockerfile .
+  - docker run -tid resume:latest /bin/bash --name resume
+  - docker cp resume:/doc/resume.pbf .
+
+after_install:
+  - docker stop resume
+  - docker rm resume
+
+deploy:
+  provider: release
+  token:
+  file: resume.pbf
+  on:
+    tags: true

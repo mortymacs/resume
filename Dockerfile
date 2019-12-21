@@ -1,3 +1,7 @@
-FROM: archlinux
+FROM archlinux
 
-RUN: pacman -Syu && pacman -S texlive-core texlive-latexextra
+COPY . /doc
+
+RUN pacman -Syu --noconfirm && pacman -S texlive-core texlive-latexextra --noconfirm
+
+RUN cd doc && make
