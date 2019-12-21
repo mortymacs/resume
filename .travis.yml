@@ -22,4 +22,5 @@ deploy:
   file: resume.pdf
   on:
     repo: mortezaipo/resume
+    branch: master
     tags: true
