@@ -21,8 +21,8 @@ after_install:
 
 deploy:
   provider: releases
-  api_key:
-    secure: 19+YcthWbjCRCZnIOq3ikGMrndZYNITDf7WNeEJXVPGTo49+cX1c9uQrZupLv1xl79sfF/w5qiJqSlGlo7WIpUnisjsrPRFSloC4yLzLSJjpX2T0ge4tz+ZdLYb1jI+Jab07seLlxuGBjglmHw2d8p0pj1ZnQ6ByV9ffdGnaVC2SjQmn4vmfUfDtNuwzlZrpZmGoeyLCLjlBG1Ax2Qu/lj/adPrUltQx8iUD/aR7I02KLqVpyhSi/KMqcQtpaHmNT7oNrx6VNL9fBYi0l+35GThfa5y0emyGMgU01B+Xhe6UtQzCsQFAx04Bjma0xKQ4IjcnFdr5WkGB7RXoDBc7GFklopEHry1mX+diG/xInfhOZ33gW8O+134NNP3B2YMi8srBZ1I6BCKkanE+D1/5hHwtosBqiZj5GH+upF8sN3Otqo4mz0ZEzvWsCFbQz9mruY1e4nfHQbEq0uU4pBnKLkRsfw/ydFgYQmy1B732J/+bDVWSc3GXYFcHNoLEAdH0uBkq5f2vsgVK4kgOWRpT2p5JdgHqPcV3QZTZNdTFStlbpGo7NfT3hGFFEBiCDhTdnxDaTNS6zXdy9PfrBy55cjodLRSAHIp/8weDTPUyjfMnfRfMZdwei/dqzXwGsg8DF338Fmj0NfcJo6pp5typtyFzNT5OX3QF8W4kSE3hsaY=
+  api_key: $GITHUB_KEY
+  skip_cleanup: true
   file: resume.pdf
   on:
     repo: mortezaipo/resume
