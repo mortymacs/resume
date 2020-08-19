@@ -24,11 +24,11 @@
 % fonts
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont[
-    SmallCapsFont = Lora-Regular.ttf ,
-    BoldFont = Lora-Bold.ttf ,
-    ItalicFont = Lora-Italic.ttf
+    SmallCapsFont = IBMPlexSansCondensed-Regular.ttf,
+    BoldFont = IBMPlexSansCondensed-Bold.ttf,
+    ItalicFont = IBMPlexSansCondensed-Italic.ttf
 ]
-{Lora-Regular.ttf}
+{IBMPlexSansCondensed-Regular.ttf}
 
 % cv sections inspired by:
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
@@ -70,14 +70,18 @@
 \section{Skills and Expertise}
 \begin{tabular}{lr}
 
-    \textsc{C/C++, Python}\\
-    \textsc{GNU/Linux Software Development, Design Pattern}\\
-    \textsc{Concurrent and Parallel Programming, Scaling and High Availability}\\
-    \textsc{Boost, APR}\\
-    \textsc{Django, Tornado, Flask, REST, SOAP}\\
-    \textsc{PostgreSQL, Redis, Memcached}\\
-    \textsc{Kafka, RabbitMQ, ZMQ}\\
-    \textsc{Kubernetes, Docker}\\
+    \textbf{Programming Languages:} \textsc{C/C++, Python}\\
+    \textbf{Concepts:} \textsc{GNU/Linux Software Development, Concurrent and Parallel Programming,}\\
+    {Scaling and High Availability, Design Patterns}\\
+    \textbf{Libraries/Frameworks:} \textsc{Boost, APR, RoutingKit, LibSpatialIndex, GTK, Django, Tornado, Flask}\\
+    \textbf{Debugging:} \textsc{GDB, Valgrind, GPerf, Massif-Visualizer, KCacheGrind, HeapTrack, HotSpot, PDB}\\
+    \textbf{Tests:} \textsc{Catch2, Pytest}\\
+    \textbf{Build systems:} \textsc{CMake, Pypi}\\
+    \textbf{Databases:} \textsc{PostgreSQL, Redis, Memcached}\\
+    \textbf{Distributed Systems:} \textsc{Kafka, RabbitMQ, ZMQ}\\
+    \textbf{DevOps:} \textsc{Bash, Kubernetes, Docker}\\
+    \textbf{Web:} \textsc{REST, SOAP}\\
+    \textbf{Scrum:} \textsc{Jira, Confluence}
 
 \end{tabular}\\
 
@@ -85,20 +89,16 @@
 \section{Projects}
 \begin{tabular}{r|p{11cm}}
 
-    \multirow{3}{*}{\hspace{2.75cm}Author}
-    & \textbf{samplecmd} - Find samples for a command\\
-    & \textbf{fawn} - GTK+ Widget Library\\
-    & \textbf{pyibsng} - IBSng Python Driver\\
-
-\end{tabular}\\
-
-\begin{tabular}{r|p{11cm}}
-
     \multirow{4}{*}{Individual Contributer}
     & \textbf{libspatialindex} - C++ implementation of R*-tree, an MVR-tree and a TPR-tree with C API\\
     & \textbf{librdkafka} - The Apache Kafka C/C++ library\\
     & \textbf{OptionsPlusPlus} - A set of c++ headers that wrap None type objects in a memory safe way.\\
     & \textbf{autobahn-python} - WebSocket and WAMP in Python for Twisted and asyncio\\
+    & \line(1,0){310}\\
+    \multirow{3}{*}{\hspace{2.75cm}Author}
+    & \textbf{samplecmd} - Find samples for a command\\
+    & \textbf{fawn} - GTK+ Widget Library\\
+    & \textbf{pyibsng} - IBSng Python Driver\\
 
 \end{tabular}\\
 
@@ -113,6 +113,14 @@
     &\footnotesize{Technologies: C++, Python, Linux, Kafka, ZMQ, Docker, Kubernetes, PostgreSQL, Redis, Django, Salt, Jenkins}\\
     &\footnotesize{Collaborate with Algorithm team.}\\
     &\footnotesize{Design, develop scalable and highly available system to run algorithms.}\\
+    &\footnotesize{Develop an operator for Kubernetes to apply custom behaviour.}\\
+    &\footnotesize{Implement a reload functionality to reduce downtime on deployment.}\\
+
+\end{tabular}
+
+% work experience (page 2)
+\section{Work Experience}
+\begin{tabular}{r|p{11cm}}
 
     \multicolumn{2}{c}{}\\
     \textsc{Apr 2018 - Nov 2018}
@@ -121,12 +129,6 @@
     &\footnotesize{Technologies: C++, Python, Linux, Apache Kafka, RabbitMQ, Cassandra, MongoDB, PostgreSQL, Redis, Docker}\\
     &\footnotesize{Collaborate with Data Science team and develop libs and environments for them.}\\
     &\footnotesize{Develop scalable and highly available system to run data-science algorithms in high performance mode.}\\
-
-\end{tabular}
-
-% work experience (page 2)
-\section{Work Experience}
-\begin{tabular}{r|p{11cm}}
 
     \multicolumn{2}{c}{}\\
     \textsc{Dec 2016 - Mar 2018}
